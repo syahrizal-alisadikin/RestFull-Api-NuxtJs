@@ -56,7 +56,7 @@ class PostController extends Controller
             'title'       => $request->title,
             'slug'        => Str::slug($request->title, '-'),
             'category_id' => $request->category_id,
-            'user_id'     => auth()->guard('api')->user()->id,
+            'user_id'     => auth()->guard('izal')->user()->id,
             'content'     => $request->content,
             'description' => $request->description    
         ]);
@@ -128,7 +128,7 @@ class PostController extends Controller
                 'title'       => $request->title,
                 'slug'        => Str::slug($request->title, '-'),
                 'category_id' => $request->category_id,
-                'user_id'     => auth()->guard('api')->user()->id,
+                'user_id'     => auth()->guard('izal')->user()->id,
                 'content'     => $request->content,
                 'description' => $request->description    
             ]);
@@ -139,7 +139,7 @@ class PostController extends Controller
             'title'       => $request->title,
                 'slug'        => Str::slug($request->title, '-'),
                 'category_id' => $request->category_id,
-                'user_id'     => auth()->guard('api')->user()->id,
+                'user_id'     => auth()->guard('izal')->user()->id,
                 'content'     => $request->content,
                 'description' => $request->description   
         ]);
